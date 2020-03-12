@@ -12,11 +12,6 @@ import (
 	"gopkg.in/urfave/cli.v2"
 )
 
-func getWD() string{
-	wd, _ := os.Getwd()
-	return wd
-}
-
 func SetupCloseHandler() {
 	c := make(chan os.Signal, 2)
 	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
@@ -51,7 +46,7 @@ func main() {
 				Aliases:     []string{"d"},
 				Usage:       "shared dir",
 				Hidden:      false,
-				Value:		 getWD(),
+				EnvVars:     []string {"PWD"},
 			},
 		},
 		Action:	 func(cctx *cli.Context) error {
