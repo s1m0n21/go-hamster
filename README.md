@@ -1,6 +1,5 @@
-## go-hamster 🐹 
+## go-hamster 🐹 - A simple file server in Go
 
-##### A simple file server in Go
 
 
 #### Install from source
