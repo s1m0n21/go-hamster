@@ -8,6 +8,5 @@ git clone https://github.com/s1m0n21/go-hamster.git
 cd go-hamster
 make install
 ```
-*make sure you have laetst version of Go*
 
 
